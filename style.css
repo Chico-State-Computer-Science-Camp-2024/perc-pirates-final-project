@@ -3,38 +3,28 @@ body{
     background-color: lightblue;
 }
 
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
 #drop-area {
     width: 500px;
     height:500px;
     padding: 30px;
-    background: #fff;
     text-align: center;
     border-radius: 20px;
 }
 
-.hero {
-    width: 100%;
-    min height:100 vh;
-    background: linearGradient (#e7baff,#c2b6d9);
-    display:flex;
-    align-content: :left;
-    justify-content: :left;
-}
-
-.title {
-    font-size: 80px;
-    font-style: italic;
-}
-
-.menu {
-    margin:auto;
-    padding: auto;
-    width: 40%;
-  
     /* display:grid; */
     /* align-items: center; */
     /* justify-content: right; */
-}
+
 
 .menu2 {
     list-style: none;
@@ -68,4 +58,62 @@ body{
     font-size: 12px;
     color: #777;
     margin-top: 15px;
+}
+
+#file-info {
+    text-align: center;
+}
+
+#purple-illusion {
+    width:980px; 
+    height: 440px;
+}
+
+
+
+.button {
+        background-color: #303b3e; /* Red */
+        color: rgb(106, 106, 106);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10px;
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+/* .button-container{
+    display: flex;
+    justify-content: center;
+} */
+
+.picIllusion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
