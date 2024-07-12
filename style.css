@@ -64,11 +64,12 @@ body{
     text-align: center;
 }
 
-#purple-illusion {
-    width:980px; 
-    height: 440px;
-}
+/* 
+#gif-illusion {
+    width: 100px;
+    height: 100px;
 
+} */
 
 
 .button {
@@ -116,4 +117,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 20px;}
+
+    
+
+#gif-illusion2pic {
+    width: 1300px;
+    height: 1000px;
 }

@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='script.js'></script> 
+    <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
 </head>
 <body>
     
@@ -43,15 +44,42 @@
      <br>
 
 <div>
-   <div class="picIllusion" id="purple-illusion2pic">
-    <img src="images/distorted-swirl.gif" id="purple-illusion">
-    <br> 
-    <div class="button-container">
-         <!-- <button class="button" id="invert-button2">Start</button> -->
+   <div class="picIllusion" id="gif-illusion2pic">
+    <img class="gif-swirl" src="images/distorted-swirl.gif" id="gif-illusion">
+    <br>
+    <div class="gif-button">
+        <!-- <button class="start">start</button>
+        <button class="stop">stop</button> -->
+        <button class="button start" id="gif-button" style="vertical-align:middle"><span>Start</span></button>
+        <button class="button stop" id="gif-button2" style="vertical-align:middle"><span>Stop</span></button>        
+    
+        <script>
+        const manual = new Freezeframe('.gif-swirl', {
+          trigger: false
+        });
+        
+        document
+          .querySelector('.start')
+          .addEventListener('click', () => {
+            manual.start();
+          });
+        
+        document
+          .querySelector('.stop')
+          .addEventListener('click', () => {
+            manual.stop();
+          });
+        </script>
+        </div>
+  
+  <!-- BACKUP CODE FOR COLOR CHANGE -->
+        <!-- <div class="button-container">
+         <button class="button" id="invert-button2">Start</button>
          <button class="button" id="invert-button2" style="vertical-align:middle"><span>Start</span></button>
-         <!-- <button class="button" id="revert-button2">Stop</button> -->
+         <button class="button" id="revert-button2">Stop</button>
          <button class="button" id="revert-button2" style="vertical-align:middle"><span>Stop</span></button>
-   </div>
+    </div>  -->
+
     <h1>Moving Illusion</h1>
     <p>This Optical Illusion seems to be moving on its own, playing tricks on your eyes and brain. 
         <br>The movement is created by things like rapid eye movements, these movements are seen between fixation points — 
@@ -59,7 +87,6 @@
      </p>
    </div>
 </div>
-
 
 <div class="hero">
     <label for="input-file" id="drop-area">
@@ -71,13 +98,16 @@
     </div>
     </label>
     <!-- </div> -->
-
     <div id="file-info">
         <h1>Create Your Own Optical Illusion!</h1>
         <p>Here you can upload your own image to experience the effects of your own optical illusions
             <br> here we use the inverted effect to change the colors and trick your brain into seeing 
             <br> a color that isn't there until you blink.
         </p>
+        <!-- <button class="button" id="invert-button">Start</button> -->
+        <button class="button" id="invert-upload-button" style="vertical-align:middle"><span>Start</span></button>
+        <!-- <button class="button" id="revert-button">Stop</button> -->
+        <button class="button" id="revert-upload-button2" style="vertical-align:middle"><span>Stop</span></button>
     </div>
 </div>
 
