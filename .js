@@ -16,7 +16,7 @@ function setup(){
             sin(angle)*1,
             cos(angle)*1
         );
-        rotate(radians(ellipse));
+
         ellipse(300, 300, 0);
         
     }
@@ -272,7 +272,10 @@ function setup(){
             cos(angle)*401
         );
         ellipse(300, 300, 25);
+
+        
     }
+
 
     
 
