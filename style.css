@@ -1,0 +1,29 @@
+body{
+    background-image: url("imageholder/Blue_Gradient.jpg");
+    background-repeat: no-repeat
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+div.ex1 {
+    width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+  }
+  
+  div.ex2 {
+    max-width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+  }
+
+
+
+.container2 {
+    display: flex;
+   flex-direction: column;
+   /* justify-content: space-around; */
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 20m;
+}
