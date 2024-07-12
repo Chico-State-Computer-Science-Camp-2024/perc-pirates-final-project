@@ -1,4 +1,133 @@
 <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Final Project</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js'></script> 
+    <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+</head>
+<body>
+    
+
+    <div class="menu">
+        <ul class="menu2">
+            <li><a href="#">Examples</a></li>
+            <li><a href="#">More Info</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+
+
+    <div>
+        <div class="picIllusion" id="orange-illusionpic">
+         <img src="images/optical_illusion_orange.jpeg" id="orange-illusion">
+         <br> 
+         <div class="button-container">
+         <!-- <button class="button" id="invert-button">Start</button> -->
+         <button class="button" id="invert-button" style="vertical-align:middle"><span>Start</span></button>
+         <!-- <button class="button" id="revert-button">Stop</button> -->
+         <button class="button" id="revert-button" style="vertical-align:middle"><span>Stop</span></button>
+         </div>
+         <h1>Embedded Illusion</h1>
+         <p>This optical illusion is an illusion that imprints itself into your eyes.
+            <br>Meaning after staring for a bit, you see the illusion pattern everytime you blink. 
+            <br>This is because there is a "neural delay" of about 100 milliseconds between when a scene 
+            <br>enters your eyes and when your brain perceives it. So even after  you have already  recieved the
+            <br> image your brain still processes it as if it is still there very faintly.
+         </p>
+        </div>
+     </div>
+
+     <br>
+
+<div>
+   <div class="picIllusion" id="gif-illusion2pic">
+    <img class="gif-swirl" src="images/distorted-swirl.gif" id="gif-illusion">
+    <br>
+    <div class="gif-button">
+        <!-- <button class="start">start</button>
+        <button class="stop">stop</button> -->
+        <button class="button start" id="gif-button" style="vertical-align:middle"><span>Start</span></button>
+        <button class="button stop" id="gif-button2" style="vertical-align:middle"><span>Stop</span></button>        
+    
+        <script>
+        const manual = new Freezeframe('.gif-swirl', {
+          trigger: false
+        });
+        
+        document
+          .querySelector('.start')
+          .addEventListener('click', () => {
+            manual.start();
+          });
+        
+        document
+          .querySelector('.stop')
+          .addEventListener('click', () => {
+            manual.stop();
+          });
+        </script>
+        </div>
+  
+  <!-- BACKUP CODE FOR COLOR CHANGE -->
+        <!-- <div class="button-container">
+         <button class="button" id="invert-button2">Start</button>
+         <button class="button" id="invert-button2" style="vertical-align:middle"><span>Start</span></button>
+         <button class="button" id="revert-button2">Stop</button>
+         <button class="button" id="revert-button2" style="vertical-align:middle"><span>Stop</span></button>
+    </div>  -->
+
+    <h1>Moving Illusion</h1>
+    <p>This Optical Illusion seems to be moving on its own, playing tricks on your eyes and brain. 
+        <br>The movement is created by things like rapid eye movements, these movements are seen between fixation points — 
+         <br> called saccades. These can sometimes trick the brain into falsely perceiving movement. 
+     </p>
+   </div>
+</div>
+
+<div class="hero">
+    <label for="input-file" id="drop-area">
+    <input type="file" accept="image/*" id="input-file" hidden>
+    <div id="img-view">
+    <img src="images/upload-cloud.png" id="upload-cloud"> 
+         <p>Drag and drop or click here to upload image</p>
+         <span>Upload any images from desktop</span>
+    </div>
+    </label>
+    <!-- </div> -->
+    <div id="file-info">
+        <h1>Create Your Own Optical Illusion!</h1>
+        <p>Here you can upload your own image to experience the effects of your own optical illusions
+            <br> here we use the inverted effect to change the colors and trick your brain into seeing 
+            <br> a color that isn't there until you blink.
+        </p>
+        <!-- <button class="button" id="invert-button">Start</button> -->
+        <button class="button" id="invert-upload-button" style="vertical-align:middle"><span>Start</span></button>
+        <!-- <button class="button" id="revert-button">Stop</button> -->
+        <button class="button" id="revert-upload-button2" style="vertical-align:middle"><span>Stop</span></button>
+    </div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intiial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <script src=".js"></script>
+    
+</head>
+<body>
+
+    <h1> my project </h1>
+    
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
