@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    h3 {text-align: center;}
+  </style>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Final Project</title>
+    <style>
+      .parallax {
+        /* The image used */
+        background-image: url("/imageholder/clouds.png");
+      
+        /* Set a specific height */
+        min-height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      </style>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='script.js'></script> 
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src='script.js' defer ></script> 
+    <link rel="stylesheet" href="style.css">
+    <script src=".js" defer></script>
     <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
 </head>
+</body>
 <body>
+  <h1><img src="imageholder/OITEXT.png" alt="Optical Illussions" width="768" height="175"></h1>
+</body>
+<div class="parallax"></div>
     
-
-    <div class="menu">
-        <ul class="menu2">
-            <li><a href="#">Examples</a></li>
-            <li><a href="#">More Info</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
-    </div>
-
+<div style="height:3240;background-repeat:no-repeat;background-size:100%100%;;background-image: url(imageholder/Orange_Gradient.png)">
+    <div>
+        <body>
+        <div style = "position:relative; left:10; top:1000px;"></div>
+            <h2><img src="imageholder/Examples.png" alt="Examples" width="512"height="150"></h2>
+        </div>
+            <div style = "position:relative; left:10; top:100px;">
+        
 
     <div>
         <div class="picIllusion" id="orange-illusionpic">
@@ -50,8 +77,11 @@
     <div class="gif-button">
         <!-- <button class="start">start</button>
         <button class="stop">stop</button> -->
+         <!-- <button class="button start" id="gif-button" style="vertical-align:middle"><span>Start</span></button>
+        <button class="button stop" id="gif-button2" style="vertical-align:middle"><span>Stop</span></button>      
+         -->
         <button class="button start" id="gif-button" style="vertical-align:middle"><span>Start</span></button>
-        <button class="button stop" id="gif-button2" style="vertical-align:middle"><span>Stop</span></button>        
+        <button class="button stop" id="gif-button2" style="vertical-align:middle"><span>Stop</span></button>    
     
         <script>
         const manual = new Freezeframe('.gif-swirl', {
@@ -69,7 +99,7 @@
           .addEventListener('click', () => {
             manual.stop();
           });
-        </script>
+        </script> 
         </div>
   
   <!-- BACKUP CODE FOR COLOR CHANGE -->
@@ -79,24 +109,51 @@
          <button class="button" id="revert-button2">Stop</button>
          <button class="button" id="revert-button2" style="vertical-align:middle"><span>Stop</span></button>
     </div>  -->
-
+<div id="moving-title">
     <h1>Moving Illusion</h1>
-    <p>This Optical Illusion seems to be moving on its own, playing tricks on your eyes and brain. 
-        <br>The movement is created by things like rapid eye movements, these movements are seen between fixation points — 
-         <br> called saccades. These can sometimes trick the brain into falsely perceiving movement. 
+   </div>
+    <p>This Optical Illusion seems to be moving on its own, playing tricks on your eyes and brain.
+       The movement is created by things like rapid eye movements, these movements are seen between 
+       fixation points — called saccades. These can sometimes trick the brain into falsely perceiving movement. 
      </p>
    </div>
 </div>
 
+<div class="picIllusion" id = "cnv">
+  <h1>Illusion from Scratch</h1>
+  <button class="button" id="alert-button" onclick="window.alert('Tell Kel yourself!')">Like it?</button>
+
+  <p>Using the information and research about optical illusions,
+     <br>Kel used code from Java Script to create a optical illusion
+     <br> that embeds a pattern for a while after staring for an amount
+      <br> of time.This optical illusion is an example of a physiological
+       <br> optical illusion which consists of the stimulation of the brains's senses. 
+  </p>
+</div>
+<!-- <button class="button" id="alert-button" onclick="window.alert('Tell Kel yourself!')">Like it?</button> -->
+<!-- <div class="picIllusion">
+  ><h1>Illusion from Scratch</h1>
+<p>Using the information and research about optical illusions, Kel used code from Java Script to 
+  <br> create a optical illusion that embeds a pattern for a while after staring for an amount of time.
+  <br>This optical illusion is an example of a physiological optical illusion which consists of the stimulation 
+  <br>of the brains's senses. 
+</p>
+<button class="button" id="alert-button" onclick="window.alert('Tell Kel yourself!')">Like it?</button>
+</div> -->
+<body>
+  <div style = "position:relative; left:10; top:3=1000px;">
+      <h3><img src="imageholder/CYO.png" alt="Create Your Own" width="512" height="189"></h1></h3>
+
+</body>
 <div class="hero">
-    <label for="input-file" id="drop-area">
-    <input type="file" accept="image/*" id="input-file" hidden>
-    <div id="img-view">
-    <img src="images/upload-cloud.png" id="upload-cloud"> 
+    <label for="file"></label> 
+    <input type="file" accept=".png, .jpeg, .jpg" id="file" name="file">
+   <img src="" height="400"  alt="Your Image Here" id="upload-image">
+    <!-- <div id="img-view">
+    <img src="" id="upload-image"> 
          <p>Drag and drop or click here to upload image</p>
          <span>Upload any images from desktop</span>
-    </div>
-    </label>
+    </div> -->
     <!-- </div> -->
     <div id="file-info">
         <h1>Create Your Own Optical Illusion!</h1>
@@ -111,20 +168,3 @@
     </div>
 </div>
 
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intiial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
-    <script src=".js"></script>
-    
-</head>
-<body>
-
-    <h1> my project </h1>
-    
-</body>
-</html>

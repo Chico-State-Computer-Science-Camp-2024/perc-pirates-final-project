@@ -1,6 +1,8 @@
-function setup(){
-    createCanvas (600, 600);
+let cnvObj;
 
+function setup(){
+    cnvObj = createCanvas (600, 600);
+    cnvObj.parent("cnv");
 }
 
 
